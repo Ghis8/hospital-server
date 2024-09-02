@@ -12,7 +12,7 @@ import {CreateAppointmentDTO} from './dto/create-appointment-dto'
 @Controller('appointment')
 export class AppointmentController {
     constructor(private appointmentService:AppointmentService){}
-    @Post()
+    @Post('create')
     create(@Body() createAppointmentDTO:CreateAppointmentDTO){
         return this.appointmentService.create(createAppointmentDTO)
     }
